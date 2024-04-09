@@ -2,6 +2,8 @@
 
 This is a minimal PoC for a compilation issues that pops up when trying to compile `if-watch` for AFL with coverage instrumentation.
 
+The issue disappears when `cdylib` is removed from the crate type array.
+
 ```bash
 source <(cargo llvm-cov show-env --export-prefix)
 cargo afl build
